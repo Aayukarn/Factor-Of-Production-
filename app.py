@@ -27,6 +27,16 @@ st.markdown("""
         margin-top: 0.6rem;
         margin-bottom: 0;
     }
+    .hero-credit {
+        color: rgba(255,255,255,0.88);
+        font-size: 0.95rem;
+        margin: 0.25rem 0 0 0;
+        letter-spacing: 0.3px;
+    }
+    .hero-credit.school {
+        font-weight: 700;
+        font-size: 1rem;
+    }
     .factor-pill-row {
         display: flex;
         gap: 0.6rem;
@@ -69,7 +79,8 @@ st.markdown("""
 st.markdown("""
 <div class="hero-banner">
     <h1>🏭 Factors of Production</h1>
-    <p>A comprehensive study of the four resources every economy needs to produce goods and services.</p>
+    <p class="hero-credit school">BY KAMAL MODEL SR SEC SCHOOL</p>
+    <p class="hero-credit">SPECIAL THANKS TO AAYU KARN AND KUNAL KUMAR MAHTO THE MAKER OF THIS WEBSITE</p>
     <div class="factor-pill-row">
         <span class="factor-pill">🌍 Land</span>
         <span class="factor-pill">👷 Labour</span>
@@ -939,4 +950,3 @@ elif topic == "Quiz Yourself":
 
 st.divider()
 st.caption("Built to explain the Factors of Production: Land, Labour, Capital, and Entrepreneurship — with historical, theoretical, and global context.")
-

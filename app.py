@@ -321,7 +321,9 @@ elif topic == "Entrepreneurship":
     Entrepreneurship is the **skill and initiative** of organizing the other three factors of production 
     (Land, Labour, Capital) to produce goods and services, while taking on the **risk** of the business venture. 
     It is often called the "fourth factor" because it was added to the classical three (land, labour, capital) 
-    later in the development of economic theory.
+    later in the development of economic theory. Unlike a machine or a plot of land, entrepreneurship is 
+    not a "thing" — it is a **capability**: the ability to spot an opportunity, gather the other three 
+    factors around it, and commit to acting before anyone can be certain it will work.
     """)
 
     st.subheader("Key Functions of an Entrepreneur")
@@ -335,6 +337,11 @@ elif topic == "Entrepreneurship":
     6. **Uncertainty-bearing** — Economist Frank Knight distinguished between measurable "risk" 
        (which can be insured against) and true "uncertainty" (which cannot) — arguing entrepreneurial 
        profit is specifically the reward for bearing this uninsurable uncertainty
+    7. **Coordination across time** — An entrepreneur commits resources today for an outcome that will 
+       only be known months or years later, effectively betting on their own judgment about the future
+    8. **Market discovery** — Economist Israel Kirzner described entrepreneurship as "alertness" — 
+       noticing profit opportunities that already exist in the market but that nobody else has spotted yet, 
+       such as a price gap between two markets, or an unmet need customers haven't been able to articulate
     """)
 
     st.subheader("Characteristics of an Entrepreneur")
@@ -345,6 +352,9 @@ elif topic == "Entrepreneurship":
     - **Resilient** — able to handle failure and try again (most successful entrepreneurs have failed at least once)
     - **Visionary** — can identify opportunities others might miss
     - **Resourceful** — able to do more with limited land, labour, and capital than competitors
+    - **Self-motivated** — often works without external supervision or a guaranteed paycheck
+    - **Comfortable with ambiguity** — able to make decisions with incomplete information
+    - **Adaptive** — willing to change the original plan based on real feedback ("pivoting")
     """)
 
     st.subheader("Reward for Entrepreneurship: Profit")
@@ -354,6 +364,32 @@ elif topic == "Entrepreneurship":
     - If the business fails, the entrepreneur may face a **loss** — this is what separates 
       entrepreneurship's reward from wages, rent, and interest, which are typically guaranteed by contract 
       (a landlord gets rent whether the business succeeds or not; wages are typically owed regardless of profit).
+
+    **Normal profit vs. Economic (Supernormal) profit** — a distinction worth knowing at a competition level:
+    - **Normal profit** is the *minimum* return needed to keep an entrepreneur in a particular business rather 
+      than switching to their next-best alternative. It's technically treated as a cost, not a true reward.
+    - **Economic profit** (also called supernormal or abnormal profit) is anything earned *above* normal 
+      profit — this is the genuine reward for entrepreneurship, usually arising from innovation, 
+      first-mover advantage, or a temporary monopoly position before competitors catch up.
+    """)
+
+    st.subheader("Types of Entrepreneurship")
+    st.markdown("""
+    - **Small Business Entrepreneurship** — local shops, restaurants, freelancers; the most common type globally, 
+      typically funded through personal savings, family, or small bank loans
+    - **Scalable Startup Entrepreneurship** — ventures explicitly built to grow fast and large, often funded by 
+      venture capital (e.g., tech startups aiming to become billion-dollar "unicorns")
+    - **Social Entrepreneurship** — ventures where the primary goal is solving a social or environmental 
+      problem, with profit as a secondary or supporting goal (e.g., a company selling affordable solar 
+      lamps in areas without reliable electricity)
+    - **Intrapreneurship** — entrepreneurial behavior *within* an existing large company, where an employee 
+      is given resources and freedom to build a new product or division as if it were their own startup
+    - **Serial Entrepreneurship** — individuals who start, grow, and often exit multiple businesses over 
+      their career rather than running just one
+    - **Necessity Entrepreneurship vs. Opportunity Entrepreneurship** — a key distinction in development 
+      economics: *necessity* entrepreneurs start a business because they have no better employment option 
+      (common in developing economies), while *opportunity* entrepreneurs start a business specifically 
+      because they've identified a promising market gap
     """)
 
     st.subheader("Schumpeter's Theory of the Entrepreneur")
@@ -363,6 +399,22 @@ elif topic == "Entrepreneurship":
     make old products, companies, and industries obsolete, while creating entirely new markets. 
     Examples: the automobile destroying the horse-carriage industry; streaming destroying the DVD rental industry; 
     smartphones destroying the standalone camera and MP3 player industries.
+
+    Schumpeter identified **five types of innovation** an entrepreneur can introduce:
+    1. A new good (or a new quality of an existing good)
+    2. A new method of production
+    3. A new market (opening a market that didn't exist for that region/product before)
+    4. A new source of supply of raw materials
+    5. A new organizational structure for an industry (e.g., creating or breaking up a monopoly)
+    """)
+
+    st.subheader("Kirzner's Theory of Alertness")
+    st.write("""
+    Economist **Israel Kirzner** offered a contrasting view to Schumpeter: rather than entrepreneurs 
+    *creating* disruption, Kirzner argued their key skill is **alertness** to opportunities that already 
+    exist but are unnoticed — for instance, spotting that a product sells for less in one market than 
+    another and profiting from that gap (arbitrage), or noticing an underserved customer need. In this 
+    view, entrepreneurship is fundamentally about *discovery*, while Schumpeter's view emphasizes *disruption*.
     """)
 
     st.subheader("Why Entrepreneurship Is Considered a Special Factor")
@@ -372,6 +424,34 @@ elif topic == "Entrepreneurship":
     - Its reward (profit) is a **residual** — what's left after paying rent, wages, and interest, 
       which is why profit can be negative (a loss) unlike the other three rewards
     - It drives **innovation and economic dynamism**, not just static production
+    - It is the hardest factor to measure or quantify — you can count acres of land or hours of labour, 
+      but there's no direct unit for "amount of entrepreneurship"
+    """)
+
+    st.subheader("The Entrepreneurial Ecosystem")
+    st.write("""
+    Modern economists increasingly study entrepreneurship not just as an individual trait but as something 
+    shaped by the surrounding **ecosystem**, including:
+    - **Access to capital** — availability of venture capital, angel investors, or business loans
+    - **Regulatory environment** — how easy or costly it is to legally register and run a business
+    - **Education and culture** — whether risk-taking and failure are socially encouraged or stigmatized
+    - **Infrastructure** — reliable internet, transport, and utilities lowering the cost of starting up
+    - **Mentorship and networks** — incubators, accelerators, and university programs that support new founders
+
+    This is why entrepreneurship hubs like Silicon Valley, Bangalore, or Tel Aviv develop — they combine 
+    many of these supporting conditions in one place, creating a self-reinforcing cycle of new ventures.
+    """)
+
+    st.subheader("Global Entrepreneurship Snapshot")
+    st.write("""
+    Organizations like the **Global Entrepreneurship Monitor (GEM)** and the World Bank's 
+    **Doing Business** reports track entrepreneurship activity worldwide, generally finding that:
+    - Many developing economies have very **high rates of necessity-driven entrepreneurship**, 
+      since formal employment opportunities are limited
+    - Advanced economies tend to have more **opportunity-driven and scalable** entrepreneurship, 
+      supported by deeper capital markets and stronger legal protections for business owners
+    - Countries that reduce the time and cost to legally register a new business tend to see 
+      measurably higher rates of formal entrepreneurship (versus informal, unregistered business activity)
     """)
 
     st.subheader("Real World Examples")
@@ -383,6 +463,12 @@ elif topic == "Entrepreneurship":
     - A farmer who decides to start their own organic vegetable business rather than just working for someone else
     - Historical examples: Henry Ford reorganizing car manufacturing with the assembly line; 
       Ray Kroc scaling McDonald's into a franchise model
+    - **Social entrepreneurship example:** Muhammad Yunus and the Grameen Bank, which pioneered 
+      microfinance — small loans to entrepreneurs too poor to qualify for traditional bank credit
+    - **Intrapreneurship example:** An employee inside a large tech company pitching and being given 
+      a small team and budget to build an entirely new product line
+    - **Necessity entrepreneurship example:** A street vendor in an economy with high unemployment, 
+      starting an informal food stall because formal jobs are scarce
     """)
 
 # ---------------------------------------------------------

@@ -3,8 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="Factors of Production", page_icon="🏭", layout="wide")
 
 st.title("🏭 Factors of Production")
-st.write("****BY KAMAL MODEL SR SEC SCHOOL****")
-st.write("**SPECIAL THANKS TO AAYU KARN AND KUNAL KUMAR MAHTO THE MAKER OF THIS WEBSITE**")
+st.write("A comprehensive study of the four resources every economy needs to produce goods and services: **Land, Labour, Capital, and Entrepreneurship.**")
 
 st.divider()
 
@@ -76,34 +75,34 @@ foundation of economics, because it answers the most basic question any society 
 # ---------------------------------------------------------
 elif topic == "Land":
     st.header("🌍 Land")
-    img1, img2, img3, img4 = st.columns(4)
-    with img1:
-        st.image("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400", caption="Farmland")
-    with img2:
-        st.image("https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400", caption="Forests")
-    with img3:
-        st.image("https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=400", caption="Minerals & Mining")
-    with img4:
-        st.image("https://images.unsplash.com/photo-1439405326854-014607f694d7?w=400", caption="Oceans & Water")
-    st.subheader("Definition")
-    st.write("""
-    In economics, "Land" refers to **all natural resources** that are used to produce goods and services — 
-    not just the ground you walk on. This includes anything that exists in or on the Earth naturally, 
-    without human effort creating it. Economists sometimes call this the **"free gift of nature."**
-    """)
 
-    st.subheader("What Counts as Land?")
-    st.markdown("""
-    - **Soil and terrain** — farmland, building plots, grazing land
-    - **Water** — rivers, lakes, oceans (used for fishing, transport, hydroelectric power)
-    - **Minerals** — iron ore, gold, coal, copper, lithium, rare earth metals
-    - **Forests** — timber, rubber, natural habitats
-    - **Oil and natural gas** — fossil fuel reserves
-    - **Climate and sunlight** — used in agriculture and solar energy generation
-    - **Wildlife and fish stocks** — natural populations harvested for food or materials
-    - **The electromagnetic spectrum** — a modern example; radio frequencies are a genuinely 
-      scarce natural resource that governments auction off to telecom companies
-    """)
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Definition")
+        st.write("""
+        In economics, "Land" refers to **all natural resources** that are used to produce goods and services — 
+        not just the ground you walk on. This includes anything that exists in or on the Earth naturally, 
+        without human effort creating it. Economists sometimes call this the **"free gift of nature."**
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400", caption="Farmland")
+
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400", caption="Forests")
+    with col_text:
+        st.subheader("What Counts as Land?")
+        st.markdown("""
+        - **Soil and terrain** — farmland, building plots, grazing land
+        - **Water** — rivers, lakes, oceans (used for fishing, transport, hydroelectric power)
+        - **Minerals** — iron ore, gold, coal, copper, lithium, rare earth metals
+        - **Forests** — timber, rubber, natural habitats
+        - **Oil and natural gas** — fossil fuel reserves
+        - **Climate and sunlight** — used in agriculture and solar energy generation
+        - **Wildlife and fish stocks** — natural populations harvested for food or materials
+        - **The electromagnetic spectrum** — a modern example; radio frequencies are a genuinely 
+          scarce natural resource that governments auction off to telecom companies
+        """)
 
     st.subheader("Characteristics of Land")
     st.markdown("""
@@ -123,30 +122,38 @@ elif topic == "Land":
        basic fertility, which exists independent of any human investment in it.
     """)
 
-    st.subheader("Reward for Land: Rent")
-    st.write("""
-    The payment made for the use of land is called **rent**. This isn't just house rent — economic rent 
-    specifically refers to payment for the *natural* resource itself, separate from any buildings on it.
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Reward for Land: Rent")
+        st.write("""
+        The payment made for the use of land is called **rent**. This isn't just house rent — economic rent 
+        specifically refers to payment for the *natural* resource itself, separate from any buildings on it.
 
-    **Ricardian Theory of Rent:** David Ricardo argued that rent arises because land differs in fertility/location. 
-    As population grows and less fertile land is brought into cultivation, the *most fertile* land earns a 
-    premium (rent) simply because it produces more for the same effort. In his model, rent is a 
-    **surplus** — it doesn't need to exist for production to happen; it exists because good land is scarce 
-    relative to demand.
-    """)
+        **Ricardian Theory of Rent:** David Ricardo argued that rent arises because land differs in fertility/location. 
+        As population grows and less fertile land is brought into cultivation, the *most fertile* land earns a 
+        premium (rent) simply because it produces more for the same effort. In his model, rent is a 
+        **surplus** — it doesn't need to exist for production to happen; it exists because good land is scarce 
+        relative to demand.
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=400", caption="Minerals & Mining")
 
-    st.subheader("Land Degradation & Sustainability")
-    st.write("""
-    Because land is fixed and mostly non-renewable on human timescales, its **overuse** is a major global concern:
-    - **Deforestation** reduces usable forest land and disrupts climate regulation
-    - **Soil erosion and desertification** — the UN estimates a significant share of the world's land is already degraded, 
-      threatening future agricultural productivity
-    - **Overfishing** depletes a "renewable" resource faster than it can regenerate
-    - **Climate change** is altering which land is even viable for agriculture, shifting growing zones toward the poles
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1439405326854-014607f694d7?w=400", caption="Oceans & Water")
+    with col_text:
+        st.subheader("Land Degradation & Sustainability")
+        st.write("""
+        Because land is fixed and mostly non-renewable on human timescales, its **overuse** is a major global concern:
+        - **Deforestation** reduces usable forest land and disrupts climate regulation
+        - **Soil erosion and desertification** — the UN estimates a significant share of the world's land is already degraded, 
+          threatening future agricultural productivity
+        - **Overfishing** depletes a "renewable" resource faster than it can regenerate
+        - **Climate change** is altering which land is even viable for agriculture, shifting growing zones toward the poles
 
-    This raises the modern economic question of **sustainable resource use** — how to use land productively today 
-    without destroying its productive capacity for future generations.
-    """)
+        This raises the modern economic question of **sustainable resource use** — how to use land productively today 
+        without destroying its productive capacity for future generations.
+        """)
 
     st.subheader("Real World Examples")
     st.markdown("""
@@ -163,32 +170,32 @@ elif topic == "Land":
 # ---------------------------------------------------------
 elif topic == "Labour":
     st.header("👷 Labour")
-    img1, img2, img3, img4 = st.columns(4)
-    with img1:
-        st.image("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400", caption="Factory Workers")
-    with img2:
-        st.image("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400", caption="Surgeon (Skilled Labour)")
-    with img3:
-        st.image("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400", caption="Software Engineer")
-    with img4:
-        st.image("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400", caption="Farm Labour")
-    st.subheader("Definition")
-    st.write("""
-    Labour refers to the **physical and mental human effort** used in the production of goods and services. 
-    It includes both blue-collar physical work and white-collar intellectual work — and is the only factor 
-    that is inseparable from a living, thinking human being.
-    """)
 
-    st.subheader("Types of Labour")
-    st.markdown("""
-    - **Skilled Labour** — requires training or education (doctors, engineers, software developers)
-    - **Semi-skilled Labour** — requires some training (machine operators, drivers)
-    - **Unskilled Labour** — requires little to no formal training (manual loading, basic farm work)
-    - **Physical Labour** — bodily effort (construction workers, farmers)
-    - **Mental Labour** — intellectual effort (writers, scientists, analysts)
-    - **Casual Labour** — irregular, often daily-wage work with no long-term contract
-    - **Migrant Labour** — workers who move (domestically or internationally) to find work opportunities
-    """)
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Definition")
+        st.write("""
+        Labour refers to the **physical and mental human effort** used in the production of goods and services. 
+        It includes both blue-collar physical work and white-collar intellectual work — and is the only factor 
+        that is inseparable from a living, thinking human being.
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400", caption="Factory Workers")
+
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400", caption="Surgeon (Skilled Labour)")
+    with col_text:
+        st.subheader("Types of Labour")
+        st.markdown("""
+        - **Skilled Labour** — requires training or education (doctors, engineers, software developers)
+        - **Semi-skilled Labour** — requires some training (machine operators, drivers)
+        - **Unskilled Labour** — requires little to no formal training (manual loading, basic farm work)
+        - **Physical Labour** — bodily effort (construction workers, farmers)
+        - **Mental Labour** — intellectual effort (writers, scientists, analysts)
+        - **Casual Labour** — irregular, often daily-wage work with no long-term contract
+        - **Migrant Labour** — workers who move (domestically or internationally) to find work opportunities
+        """)
 
     st.subheader("Characteristics of Labour")
     st.markdown("""
@@ -208,16 +215,20 @@ elif topic == "Labour":
        family ties, visa restrictions, and licensing rules limit this mobility compared to how easily money moves.
     """)
 
-    st.subheader("Reward for Labour: Wages")
-    st.write("""
-    Workers are paid **wages** (or salaries) in exchange for their labour. Wages can be structured as:
-    - **Time-based** — paid per hour, day, or month
-    - **Piece-rate** — paid per unit of output produced
-    - **Salary** — a fixed regular payment regardless of hours worked in a given day
-    - **Commission-based** — tied to sales or performance outcomes
-    - **Real wages vs Nominal wages** — nominal wage is the money amount received; real wage adjusts 
-      for inflation to show actual purchasing power, which is the figure economists care about most
-    """)
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Reward for Labour: Wages")
+        st.write("""
+        Workers are paid **wages** (or salaries) in exchange for their labour. Wages can be structured as:
+        - **Time-based** — paid per hour, day, or month
+        - **Piece-rate** — paid per unit of output produced
+        - **Salary** — a fixed regular payment regardless of hours worked in a given day
+        - **Commission-based** — tied to sales or performance outcomes
+        - **Real wages vs Nominal wages** — nominal wage is the money amount received; real wage adjusts 
+          for inflation to show actual purchasing power, which is the figure economists care about most
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400", caption="Software Engineer")
 
     st.subheader("Factors Affecting Wage Levels")
     st.markdown("""
@@ -230,14 +241,18 @@ elif topic == "Labour":
       (the extra output produced by one more worker)
     """)
 
-    st.subheader("Division of Labour & Specialization")
-    st.write("""
-    Adam Smith's famous **pin factory example** showed that breaking production into specialized tasks 
-    massively increases output — ten workers each doing one small step in making a pin could produce 
-    thousands of times more pins per day than ten workers each making a whole pin individually. 
-    This principle of **specialization** underlies almost all modern industry, global trade, and 
-    even careers themselves (people specializing in one profession rather than being generalists).
-    """)
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400", caption="Farm Labour")
+    with col_text:
+        st.subheader("Division of Labour & Specialization")
+        st.write("""
+        Adam Smith's famous **pin factory example** showed that breaking production into specialized tasks 
+        massively increases output — ten workers each doing one small step in making a pin could produce 
+        thousands of times more pins per day than ten workers each making a whole pin individually. 
+        This principle of **specialization** underlies almost all modern industry, global trade, and 
+        even careers themselves (people specializing in one profession rather than being generalists).
+        """)
 
     st.subheader("Real World Examples")
     st.markdown("""
@@ -252,37 +267,37 @@ elif topic == "Labour":
 # ---------------------------------------------------------
 elif topic == "Capital":
     st.header("🏗️ Capital")
-    img1, img2, img3, img4 = st.columns(4)
-    with img1:
-        st.image("https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400", caption="Industrial Machinery")
-    with img2:
-        st.image("https://images.unsplash.com/photo-1595656180594-2fa9b3d0aa30?w=400", caption="Tractor (Fixed Capital)")
-    with img3:
-        st.image("https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=400", caption="Factory Assembly Line")
-    with img4:
-        st.image("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400", caption="Laptop (Digital Capital)")
-    st.subheader("Definition")
-    st.write("""
-    Capital refers to **man-made resources** used to produce other goods and services. 
-    Unlike land, capital does NOT occur naturally — humans have to build it first, using land, 
-    labour, and existing capital in a continuous cycle.
-    """)
 
-    st.subheader("Types of Capital")
-    st.markdown("""
-    - **Fixed Capital** — long-lasting resources used repeatedly over many production cycles 
-      (machinery, buildings, tools, vehicles)
-    - **Working Capital** — resources used up in a single production cycle (raw materials, fuel, 
-      cash for daily operations)
-    - **Real Capital** — the physical/tangible tools and machines themselves
-    - **Financial Capital** — money invested to acquire real capital (loans, shareholder investment, venture capital)
-    - **Human Capital** *(related but distinct)* — the skills, knowledge, training, and health embedded 
-      in workers, which increases their productivity; economists like Gary Becker argued education and 
-      training should be thought of as an *investment* in capital, not just a cost
-    - **Social/Infrastructure Capital** — roads, ports, electricity grids, the internet — often built 
-      by governments and used by all businesses in an economy
-    - **Intellectual Capital** — patents, trademarks, brand value, proprietary software and algorithms
-    """)
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Definition")
+        st.write("""
+        Capital refers to **man-made resources** used to produce other goods and services. 
+        Unlike land, capital does NOT occur naturally — humans have to build it first, using land, 
+        labour, and existing capital in a continuous cycle.
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400", caption="Industrial Machinery")
+
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1595656180594-2fa9b3d0aa30?w=400", caption="Tractor (Fixed Capital)")
+    with col_text:
+        st.subheader("Types of Capital")
+        st.markdown("""
+        - **Fixed Capital** — long-lasting resources used repeatedly over many production cycles 
+          (machinery, buildings, tools, vehicles)
+        - **Working Capital** — resources used up in a single production cycle (raw materials, fuel, 
+          cash for daily operations)
+        - **Real Capital** — the physical/tangible tools and machines themselves
+        - **Financial Capital** — money invested to acquire real capital (loans, shareholder investment, venture capital)
+        - **Human Capital** *(related but distinct)* — the skills, knowledge, training, and health embedded 
+          in workers, which increases their productivity; economists like Gary Becker argued education and 
+          training should be thought of as an *investment* in capital, not just a cost
+        - **Social/Infrastructure Capital** — roads, ports, electricity grids, the internet — often built 
+          by governments and used by all businesses in an economy
+        - **Intellectual Capital** — patents, trademarks, brand value, proprietary software and algorithms
+        """)
 
     st.subheader("Characteristics of Capital")
     st.markdown("""
@@ -302,16 +317,20 @@ elif topic == "Capital":
        even if physically functional).
     """)
 
-    st.subheader("Reward for Capital: Interest")
-    st.write("""
-    The payment made for the use of capital is called **interest**. When someone lends money to a business 
-    so it can buy machinery, they are compensated with interest for giving up the use of their money 
-    and for the risk that it might not be repaid.
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Reward for Capital: Interest")
+        st.write("""
+        The payment made for the use of capital is called **interest**. When someone lends money to a business 
+        so it can buy machinery, they are compensated with interest for giving up the use of their money 
+        and for the risk that it might not be repaid.
 
-    **Time preference theory** explains why interest exists at all: people generally prefer having money 
-    *now* rather than later (a concept called "time preference"), so lenders must be compensated with 
-    interest to convince them to delay their own consumption.
-    """)
+        **Time preference theory** explains why interest exists at all: people generally prefer having money 
+        *now* rather than later (a concept called "time preference"), so lenders must be compensated with 
+        interest to convince them to delay their own consumption.
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=400", caption="Factory Assembly Line")
 
     st.subheader("Capital vs. Money — An Important Distinction")
     st.write("""
@@ -322,13 +341,17 @@ elif topic == "Capital":
     machine, or building that helps produce something.
     """)
 
-    st.subheader("Capital Formation and Economic Growth")
-    st.write("""
-    **Gross Capital Formation** (also called investment) is one of the four components of GDP, alongside 
-    consumption, government spending, and net exports. Countries with high rates of capital formation 
-    (building more factories, infrastructure, and machinery) tend to see faster long-term economic growth — 
-    this is a core insight of the **Solow Growth Model**, a foundational framework in growth economics.
-    """)
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400", caption="Laptop (Digital Capital)")
+    with col_text:
+        st.subheader("Capital Formation and Economic Growth")
+        st.write("""
+        **Gross Capital Formation** (also called investment) is one of the four components of GDP, alongside 
+        consumption, government spending, and net exports. Countries with high rates of capital formation 
+        (building more factories, infrastructure, and machinery) tend to see faster long-term economic growth — 
+        this is a core insight of the **Solow Growth Model**, a foundational framework in growth economics.
+        """)
 
     st.subheader("Real World Examples")
     st.markdown("""
@@ -344,24 +367,20 @@ elif topic == "Capital":
 # ---------------------------------------------------------
 elif topic == "Entrepreneurship":
     st.header("💡 Entrepreneurship")
-    img1, img2, img3, img4 = st.columns(4)
-    with img1:
+
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Definition")
+        st.write("""
+        Entrepreneurship is the **skill and initiative** of organizing the other three factors of production 
+        (Land, Labour, Capital) to produce goods and services, while taking on the **risk** of the business venture. 
+        It is often called the "fourth factor" because it was added to the classical three (land, labour, capital) 
+        later in the development of economic theory. Unlike a machine or a plot of land, entrepreneurship is 
+        not a "thing" — it is a **capability**: the ability to spot an opportunity, gather the other three 
+        factors around it, and commit to acting before anyone can be certain it will work.
+        """)
+    with col_img:
         st.image("https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400", caption="Founder at Work")
-    with img2:
-        st.image("https://images.unsplash.com/photo-1552664730-d307ca884978?w=400", caption="Startup Team")
-    with img3:
-        st.image("https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400", caption="Pitching an Idea")
-    with img4:
-        st.image("https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400", caption="Small Business Owner")
-    st.subheader("Definition")
-    st.write("""
-    Entrepreneurship is the **skill and initiative** of organizing the other three factors of production 
-    (Land, Labour, Capital) to produce goods and services, while taking on the **risk** of the business venture. 
-    It is often called the "fourth factor" because it was added to the classical three (land, labour, capital) 
-    later in the development of economic theory. Unlike a machine or a plot of land, entrepreneurship is 
-    not a "thing" — it is a **capability**: the ability to spot an opportunity, gather the other three 
-    factors around it, and commit to acting before anyone can be certain it will work.
-    """)
 
     st.subheader("Key Functions of an Entrepreneur")
     st.markdown("""
@@ -410,40 +429,48 @@ elif topic == "Entrepreneurship":
       first-mover advantage, or a temporary monopoly position before competitors catch up.
     """)
 
-    st.subheader("Types of Entrepreneurship")
-    st.markdown("""
-    - **Small Business Entrepreneurship** — local shops, restaurants, freelancers; the most common type globally, 
-      typically funded through personal savings, family, or small bank loans
-    - **Scalable Startup Entrepreneurship** — ventures explicitly built to grow fast and large, often funded by 
-      venture capital (e.g., tech startups aiming to become billion-dollar "unicorns")
-    - **Social Entrepreneurship** — ventures where the primary goal is solving a social or environmental 
-      problem, with profit as a secondary or supporting goal (e.g., a company selling affordable solar 
-      lamps in areas without reliable electricity)
-    - **Intrapreneurship** — entrepreneurial behavior *within* an existing large company, where an employee 
-      is given resources and freedom to build a new product or division as if it were their own startup
-    - **Serial Entrepreneurship** — individuals who start, grow, and often exit multiple businesses over 
-      their career rather than running just one
-    - **Necessity Entrepreneurship vs. Opportunity Entrepreneurship** — a key distinction in development 
-      economics: *necessity* entrepreneurs start a business because they have no better employment option 
-      (common in developing economies), while *opportunity* entrepreneurs start a business specifically 
-      because they've identified a promising market gap
-    """)
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1552664730-d307ca884978?w=400", caption="Startup Team")
+    with col_text:
+        st.subheader("Types of Entrepreneurship")
+        st.markdown("""
+        - **Small Business Entrepreneurship** — local shops, restaurants, freelancers; the most common type globally, 
+          typically funded through personal savings, family, or small bank loans
+        - **Scalable Startup Entrepreneurship** — ventures explicitly built to grow fast and large, often funded by 
+          venture capital (e.g., tech startups aiming to become billion-dollar "unicorns")
+        - **Social Entrepreneurship** — ventures where the primary goal is solving a social or environmental 
+          problem, with profit as a secondary or supporting goal (e.g., a company selling affordable solar 
+          lamps in areas without reliable electricity)
+        - **Intrapreneurship** — entrepreneurial behavior *within* an existing large company, where an employee 
+          is given resources and freedom to build a new product or division as if it were their own startup
+        - **Serial Entrepreneurship** — individuals who start, grow, and often exit multiple businesses over 
+          their career rather than running just one
+        - **Necessity Entrepreneurship vs. Opportunity Entrepreneurship** — a key distinction in development 
+          economics: *necessity* entrepreneurs start a business because they have no better employment option 
+          (common in developing economies), while *opportunity* entrepreneurs start a business specifically 
+          because they've identified a promising market gap
+        """)
 
-    st.subheader("Schumpeter's Theory of the Entrepreneur")
-    st.write("""
-    Economist **Joseph Schumpeter** (early-to-mid 1900s) argued entrepreneurs are the engine of 
-    economic progress through **"creative destruction"** — the process by which new innovations 
-    make old products, companies, and industries obsolete, while creating entirely new markets. 
-    Examples: the automobile destroying the horse-carriage industry; streaming destroying the DVD rental industry; 
-    smartphones destroying the standalone camera and MP3 player industries.
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Schumpeter's Theory of the Entrepreneur")
+        st.write("""
+        Economist **Joseph Schumpeter** (early-to-mid 1900s) argued entrepreneurs are the engine of 
+        economic progress through **"creative destruction"** — the process by which new innovations 
+        make old products, companies, and industries obsolete, while creating entirely new markets. 
+        Examples: the automobile destroying the horse-carriage industry; streaming destroying the DVD rental industry; 
+        smartphones destroying the standalone camera and MP3 player industries.
 
-    Schumpeter identified **five types of innovation** an entrepreneur can introduce:
-    1. A new good (or a new quality of an existing good)
-    2. A new method of production
-    3. A new market (opening a market that didn't exist for that region/product before)
-    4. A new source of supply of raw materials
-    5. A new organizational structure for an industry (e.g., creating or breaking up a monopoly)
-    """)
+        Schumpeter identified **five types of innovation** an entrepreneur can introduce:
+        1. A new good (or a new quality of an existing good)
+        2. A new method of production
+        3. A new market (opening a market that didn't exist for that region/product before)
+        4. A new source of supply of raw materials
+        5. A new organizational structure for an industry (e.g., creating or breaking up a monopoly)
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400", caption="Pitching an Idea")
 
     st.subheader("Kirzner's Theory of Alertness")
     st.write("""
@@ -465,19 +492,23 @@ elif topic == "Entrepreneurship":
       but there's no direct unit for "amount of entrepreneurship"
     """)
 
-    st.subheader("The Entrepreneurial Ecosystem")
-    st.write("""
-    Modern economists increasingly study entrepreneurship not just as an individual trait but as something 
-    shaped by the surrounding **ecosystem**, including:
-    - **Access to capital** — availability of venture capital, angel investors, or business loans
-    - **Regulatory environment** — how easy or costly it is to legally register and run a business
-    - **Education and culture** — whether risk-taking and failure are socially encouraged or stigmatized
-    - **Infrastructure** — reliable internet, transport, and utilities lowering the cost of starting up
-    - **Mentorship and networks** — incubators, accelerators, and university programs that support new founders
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400", caption="Small Business Owner")
+    with col_text:
+        st.subheader("The Entrepreneurial Ecosystem")
+        st.write("""
+        Modern economists increasingly study entrepreneurship not just as an individual trait but as something 
+        shaped by the surrounding **ecosystem**, including:
+        - **Access to capital** — availability of venture capital, angel investors, or business loans
+        - **Regulatory environment** — how easy or costly it is to legally register and run a business
+        - **Education and culture** — whether risk-taking and failure are socially encouraged or stigmatized
+        - **Infrastructure** — reliable internet, transport, and utilities lowering the cost of starting up
+        - **Mentorship and networks** — incubators, accelerators, and university programs that support new founders
 
-    This is why entrepreneurship hubs like Silicon Valley, Bangalore, or Tel Aviv develop — they combine 
-    many of these supporting conditions in one place, creating a self-reinforcing cycle of new ventures.
-    """)
+        This is why entrepreneurship hubs like Silicon Valley, Bangalore, or Tel Aviv develop — they combine 
+        many of these supporting conditions in one place, creating a self-reinforcing cycle of new ventures.
+        """)
 
     st.subheader("Global Entrepreneurship Snapshot")
     st.write("""
@@ -820,3 +851,4 @@ elif topic == "Quiz Yourself":
 
 st.divider()
 st.caption("Built to explain the Factors of Production: Land, Labour, Capital, and Entrepreneurship — with historical, theoretical, and global context.")
+

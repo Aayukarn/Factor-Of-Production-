@@ -80,7 +80,7 @@ st.markdown("""
 <div class="hero-banner">
     <h1>🏭 Factors of Production</h1>
     <p class="hero-credit school">BY KAMAL MODEL SR SEC SCHOOL</p>
-    <p class="hero-credit">SPECIAL THANKS TO AAYU KARN AND KUNAL KUMAR MAHTO THE MAKER OF THIS WEBSITE</p>
+    <p class="hero-credit"><strong>SPECIAL THANKS TO AAYU KARN AND KUNAL KUMAR MAHTO THE MAKER OF THIS WEBSITE</strong></p>
     <div class="factor-pill-row">
         <span class="factor-pill">🌍 Land</span>
         <span class="factor-pill">👷 Labour</span>
@@ -950,3 +950,4 @@ elif topic == "Quiz Yourself":
 
 st.divider()
 st.caption("Built to explain the Factors of Production: Land, Labour, Capital, and Entrepreneurship — with historical, theoretical, and global context.")
+

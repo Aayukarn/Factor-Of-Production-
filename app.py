@@ -4,6 +4,14 @@ st.set_page_config(page_title="Factors of Production", page_icon="🏭", layout=
 
 st.markdown("""
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+    html, body, p, li, span, div {
+        font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, .hero-banner h1 {
+        font-family: 'Poppins', sans-serif;
+    }
     .main {
         background-color: #fafafa;
     }
@@ -72,6 +80,82 @@ st.markdown("""
     img {
         border-radius: 12px;
         box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    img:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+    }
+    hr {
+        border: none;
+        height: 2px;
+        background: linear-gradient(90deg, #4a7c6d, #d97b3f, #3a6ea5, #6b4c8a);
+        border-radius: 2px;
+        opacity: 0.55;
+        margin: 1.4rem 0;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    table th {
+        background-color: #4a7c6d;
+        color: white;
+        padding: 0.6rem 0.8rem;
+        text-align: left;
+    }
+    table td {
+        padding: 0.55rem 0.8rem;
+        border-bottom: 1px solid #e2e2e2;
+    }
+    table tr:hover {
+        background-color: #f0f5f3;
+    }
+    .quiz-feedback {
+        padding: 0.65rem 1rem;
+        border-radius: 10px;
+        margin: 0.4rem 0 1rem 0;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+    .quiz-feedback.correct {
+        background-color: #e3f3ec;
+        color: #1e5c42;
+        border-left: 4px solid #2d8a5f;
+    }
+    .quiz-feedback.incorrect {
+        background-color: #fdecea;
+        color: #8a2d20;
+        border-left: 4px solid #d9534f;
+    }
+    section[data-testid="stSidebar"] {
+        background-color: #1f3d33;
+    }
+    section[data-testid="stSidebar"] * {
+        color: #f5f5f5 !important;
+    }
+    section[data-testid="stSidebar"] .stRadio label {
+        font-size: 0.98rem;
+        padding: 0.15rem 0;
+    }
+    .app-footer {
+        text-align: center;
+        padding: 1.2rem 0 0.4rem 0;
+        color: #7a8c84;
+        font-size: 0.85rem;
+    }
+    @media (max-width: 768px) {
+        div[data-testid="column"] {
+            width: 100% !important;
+            flex: 1 1 100% !important;
+            min-width: 100% !important;
+        }
+        .hero-banner h1 {
+            font-size: 1.9rem;
+        }
+        .hero-banner {
+            padding: 1.8rem 1.3rem;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
@@ -92,12 +176,17 @@ st.markdown("""
 
 st.divider()
 
-topic = st.selectbox(
+st.sidebar.markdown("### 📖 Navigate")
+_topic_display = st.sidebar.radio(
     "Choose a topic to explore in depth:",
-    ["Overview", "Land", "Labour", "Capital", "Entrepreneurship",
-     "Economic Theories & Thinkers", "How They Work Together",
-     "Country Case Studies", "Modern Debates", "Quiz Yourself"]
+    ["🏠 Overview", "🌍 Land", "👷 Labour", "🏗️ Capital", "💡 Entrepreneurship",
+     "📚 Economic Theories & Thinkers", "🔗 How They Work Together",
+     "🌐 Country Case Studies", "🗣️ Modern Debates", "📝 Quiz Yourself"],
+    label_visibility="collapsed"
 )
+topic = _topic_display.split(" ", 1)[1]
+st.sidebar.divider()
+st.sidebar.caption("Kamal Model Sr Sec School")
 
 # ---------------------------------------------------------
 if topic == "Overview":
@@ -779,7 +868,7 @@ elif topic == "Country Case Studies":
         st.write("""
         For decades, Saudi Arabia's economy has been built overwhelmingly around its natural resource 
         endowment — vast oil reserves (Land). This has funded national infrastructure and development, 
-        but has also created a economic vulnerability to oil price swings, prompting the country's 
+        but has also created an economic vulnerability to oil price swings, prompting the country's 
         "Vision 2030" plan to diversify into tourism, technology, and entrepreneurship-driven sectors.
         """)
     with col_img:
@@ -898,7 +987,10 @@ elif topic == "Quiz Yourself":
         index=None
     )
     if q1:
-        st.write("✅ Correct!" if q1 == "Rent" else "❌ Not quite — the reward for Land is **Rent**.")
+        if q1 == "Rent":
+            st.markdown('<div class="quiz-feedback correct">✅ Correct!</div>', unsafe_allow_html=True)
+        else:
+            st.markdown('<div class="quiz-feedback incorrect">❌ Not quite — the reward for Land is <strong>Rent</strong>.</div>', unsafe_allow_html=True)
 
     q2 = st.radio(
         "2. Which factor bears the risk of loss?",
@@ -906,7 +998,10 @@ elif topic == "Quiz Yourself":
         index=None
     )
     if q2:
-        st.write("✅ Correct!" if q2 == "Entrepreneurship" else "❌ Not quite — **Entrepreneurship** is the risk-bearing factor.")
+        if q2 == "Entrepreneurship":
+            st.markdown('<div class="quiz-feedback correct">✅ Correct!</div>', unsafe_allow_html=True)
+        else:
+            st.markdown('<div class="quiz-feedback incorrect">❌ Not quite — <strong>Entrepreneurship</strong> is the risk-bearing factor.</div>', unsafe_allow_html=True)
 
     q3 = st.radio(
         "3. Is money itself considered Capital in economics?",
@@ -914,7 +1009,10 @@ elif topic == "Quiz Yourself":
         index=None
     )
     if q3:
-        st.write("✅ Correct!" if q3 == "No, only when used to buy capital goods" else "❌ Not quite — money is only capital when it's used to purchase capital goods like machinery.")
+        if q3 == "No, only when used to buy capital goods":
+            st.markdown('<div class="quiz-feedback correct">✅ Correct!</div>', unsafe_allow_html=True)
+        else:
+            st.markdown('<div class="quiz-feedback incorrect">❌ Not quite — money is only capital when it\'s used to purchase capital goods like machinery.</div>', unsafe_allow_html=True)
 
     q4 = st.radio(
         "4. Which factor is geographically immobile?",
@@ -922,7 +1020,10 @@ elif topic == "Quiz Yourself":
         index=None
     )
     if q4:
-        st.write("✅ Correct!" if q4 == "Land" else "❌ Not quite — **Land** cannot be physically relocated.")
+        if q4 == "Land":
+            st.markdown('<div class="quiz-feedback correct">✅ Correct!</div>', unsafe_allow_html=True)
+        else:
+            st.markdown('<div class="quiz-feedback incorrect">❌ Not quite — <strong>Land</strong> cannot be physically relocated.</div>', unsafe_allow_html=True)
 
     q5 = st.radio(
         "5. Who is credited with identifying Entrepreneurship as a distinct fourth factor?",
@@ -930,7 +1031,10 @@ elif topic == "Quiz Yourself":
         index=None
     )
     if q5:
-        st.write("✅ Correct!" if q5 == "Jean-Baptiste Say" else "❌ Not quite — **Jean-Baptiste Say** is credited with this.")
+        if q5 == "Jean-Baptiste Say":
+            st.markdown('<div class="quiz-feedback correct">✅ Correct!</div>', unsafe_allow_html=True)
+        else:
+            st.markdown('<div class="quiz-feedback incorrect">❌ Not quite — <strong>Jean-Baptiste Say</strong> is credited with this.</div>', unsafe_allow_html=True)
 
     q6 = st.radio(
         "6. What did Joseph Schumpeter call the process where new innovations make old industries obsolete?",
@@ -938,7 +1042,10 @@ elif topic == "Quiz Yourself":
         index=None
     )
     if q6:
-        st.write("✅ Correct!" if q6 == "Creative destruction" else "❌ Not quite — Schumpeter called this **'Creative destruction.'**")
+        if q6 == "Creative destruction":
+            st.markdown('<div class="quiz-feedback correct">✅ Correct!</div>', unsafe_allow_html=True)
+        else:
+            st.markdown('<div class="quiz-feedback incorrect">❌ Not quite — Schumpeter called this <strong>\'Creative destruction.\'</strong></div>', unsafe_allow_html=True)
 
     q7 = st.radio(
         "7. According to Frank Knight, entrepreneurial profit is the reward for bearing what?",
@@ -946,8 +1053,14 @@ elif topic == "Quiz Yourself":
         index=None
     )
     if q7:
-        st.write("✅ Correct!" if q7 == "Uninsurable uncertainty" else "❌ Not quite — Knight argued profit rewards **uninsurable uncertainty**, distinct from measurable risk.")
+        if q7 == "Uninsurable uncertainty":
+            st.markdown('<div class="quiz-feedback correct">✅ Correct!</div>', unsafe_allow_html=True)
+        else:
+            st.markdown('<div class="quiz-feedback incorrect">❌ Not quite — Knight argued profit rewards <strong>uninsurable uncertainty</strong>, distinct from measurable risk.</div>', unsafe_allow_html=True)
 
-st.divider()
-st.caption("Built to explain the Factors of Production: Land, Labour, Capital, and Entrepreneurship — with historical, theoretical, and global context.")
-
+st.markdown("""
+<div class="app-footer">
+    🏭 Factors of Production — Land, Labour, Capital &amp; Entrepreneurship<br>
+    Kamal Model Sr Sec School · Made by Aayu Karn &amp; Kunal Kumar Mahto
+</div>
+""", unsafe_allow_html=True)

@@ -2,8 +2,82 @@ import streamlit as st
 
 st.set_page_config(page_title="Factors of Production", page_icon="🏭", layout="wide")
 
-st.title("🏭 Factors of Production")
-st.write("A comprehensive study of the four resources every economy needs to produce goods and services: **Land, Labour, Capital, and Entrepreneurship.**")
+st.markdown("""
+<style>
+    .main {
+        background-color: #fafafa;
+    }
+    .hero-banner {
+        background: linear-gradient(135deg, #2d5f4c 0%, #4a7c6d 25%, #d97b3f 50%, #3a6ea5 75%, #6b4c8a 100%);
+        padding: 2.5rem 2rem;
+        border-radius: 16px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .hero-banner h1 {
+        color: white;
+        font-size: 2.6rem;
+        font-weight: 800;
+        margin: 0;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    }
+    .hero-banner p {
+        color: rgba(255,255,255,0.92);
+        font-size: 1.1rem;
+        margin-top: 0.6rem;
+        margin-bottom: 0;
+    }
+    .factor-pill-row {
+        display: flex;
+        gap: 0.6rem;
+        margin-top: 1.2rem;
+        flex-wrap: wrap;
+    }
+    .factor-pill {
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(4px);
+        color: white;
+        padding: 0.35rem 0.9rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        border: 1px solid rgba(255,255,255,0.35);
+    }
+    h2, h3 {
+        color: #26332d;
+        font-weight: 700;
+    }
+    .stSelectbox label {
+        font-size: 1.05rem;
+        font-weight: 600;
+        color: #26332d;
+    }
+    div[data-baseweb="select"] > div {
+        border-radius: 10px;
+        border: 2px solid #4a7c6d;
+    }
+    .stAlert {
+        border-radius: 12px;
+    }
+    img {
+        border-radius: 12px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="hero-banner">
+    <h1>🏭 Factors of Production</h1>
+    <p>A comprehensive study of the four resources every economy needs to produce goods and services.</p>
+    <div class="factor-pill-row">
+        <span class="factor-pill">🌍 Land</span>
+        <span class="factor-pill">👷 Labour</span>
+        <span class="factor-pill">🏗️ Capital</span>
+        <span class="factor-pill">💡 Entrepreneurship</span>
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 st.divider()
 
@@ -542,27 +616,22 @@ elif topic == "Entrepreneurship":
 # ---------------------------------------------------------
 elif topic == "Economic Theories & Thinkers":
     st.header("📚 Key Economic Theories & Thinkers")
-    img1, img2, img3, img4 = st.columns(4)
-    with img1:
-        st.image("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400", caption="Classical Economics Era")
-    with img2:
-        st.image("https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400", caption="Economic Theory & Books")
-    with img3:
-        st.image("https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400", caption="Markets & Trade")
-    with img4:
-        st.image("https://images.unsplash.com/photo-1543286386-713bdd548da4?w=400", caption="Industrial Progress")
     st.write("""
     The four-factor model didn't appear overnight — it developed over roughly 250 years of economic thought. 
     Here are the major contributors and how their ideas connect to what you've learned.
     """)
 
-    st.subheader("Adam Smith (1723–1790)")
-    st.write("""
-    Often called the "father of modern economics," Smith's 1776 book *The Wealth of Nations* first 
-    systematically linked the three original factors (land, labour, capital) to their respective 
-    incomes (rent, wages, profit). He also introduced the idea of the **"invisible hand"** — the concept 
-    that individuals pursuing their own self-interest in a free market can unintentionally benefit society as a whole.
-    """)
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Adam Smith (1723–1790)")
+        st.write("""
+        Often called the "father of modern economics," Smith's 1776 book *The Wealth of Nations* first 
+        systematically linked the three original factors (land, labour, capital) to their respective 
+        incomes (rent, wages, profit). He also introduced the idea of the **"invisible hand"** — the concept 
+        that individuals pursuing their own self-interest in a free market can unintentionally benefit society as a whole.
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400", caption="Classical Economics Era")
 
     st.subheader("David Ricardo (1772–1823)")
     st.write("""
@@ -572,12 +641,16 @@ elif topic == "Economic Theories & Thinkers":
     one country is better at producing everything.
     """)
 
-    st.subheader("Jean-Baptiste Say (1767–1832)")
-    st.write("""
-    A French economist credited with identifying **entrepreneurship** as a distinct factor of production, 
-    separate from simple "labour management." He emphasized the entrepreneur's role in shifting resources 
-    from lower-value to higher-value uses.
-    """)
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400", caption="Economic Theory & Books")
+    with col_text:
+        st.subheader("Jean-Baptiste Say (1767–1832)")
+        st.write("""
+        A French economist credited with identifying **entrepreneurship** as a distinct factor of production, 
+        separate from simple "labour management." He emphasized the entrepreneur's role in shifting resources 
+        from lower-value to higher-value uses.
+        """)
 
     st.subheader("Karl Marx (1818–1883)")
     st.write("""
@@ -587,12 +660,16 @@ elif topic == "Economic Theories & Thinkers":
     of capitalism and his labour theory of value.
     """)
 
-    st.subheader("Alfred Marshall (1842–1924)")
-    st.write("""
-    Helped formalize the modern **marginalist** approach to economics, including the idea that each 
-    factor of production is paid according to its **marginal productivity** — the additional output 
-    generated by one more unit of that factor. This is the dominant framework used in modern economics today.
-    """)
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("Alfred Marshall (1842–1924)")
+        st.write("""
+        Helped formalize the modern **marginalist** approach to economics, including the idea that each 
+        factor of production is paid according to its **marginal productivity** — the additional output 
+        generated by one more unit of that factor. This is the dominant framework used in modern economics today.
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400", caption="Markets & Trade")
 
     st.subheader("Joseph Schumpeter (1883–1950)")
     st.write("""
@@ -601,13 +678,17 @@ elif topic == "Economic Theories & Thinkers":
     is the true engine of long-term economic growth and capitalism's defining feature.
     """)
 
-    st.subheader("Frank Knight (1885–1972)")
-    st.write("""
-    Distinguished between **risk** (measurable, insurable probability of loss) and **uncertainty** 
-    (unmeasurable, uninsurable unknowns). Knight argued entrepreneurial profit is specifically the 
-    reward for bearing this second, uninsurable kind of uncertainty — a foundational idea in modern 
-    theories of the firm and entrepreneurship.
-    """)
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1543286386-713bdd548da4?w=400", caption="Industrial Progress")
+    with col_text:
+        st.subheader("Frank Knight (1885–1972)")
+        st.write("""
+        Distinguished between **risk** (measurable, insurable probability of loss) and **uncertainty** 
+        (unmeasurable, uninsurable unknowns). Knight argued entrepreneurial profit is specifically the 
+        reward for bearing this second, uninsurable kind of uncertainty — a foundational idea in modern 
+        theories of the firm and entrepreneurship.
+        """)
 
     st.subheader("Robert Solow (1924–2023)")
     st.write("""
@@ -676,51 +757,58 @@ elif topic == "How They Work Together":
 # ---------------------------------------------------------
 elif topic == "Country Case Studies":
     st.header("🌐 Country Case Studies")
-    img1, img2, img3, img4 = st.columns(4)
-    with img1:
-        st.image("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400", caption="Saudi Arabia — Oil & Land")
-    with img2:
-        st.image("https://images.unsplash.com/photo-1474181487882-a96a18d0771c?w=400", caption="China — Manufacturing")
-    with img3:
-        st.image("https://images.unsplash.com/photo-1528747045269-390fe33c19f2?w=400", caption="India — Tech & Startups")
-    with img4:
-        st.image("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400", caption="USA — Innovation Hubs")
     st.write("""
     Different countries have built their economies by emphasizing different factors of production. 
     These examples show how the four-factor framework plays out at a national scale.
     """)
 
-    st.subheader("🇸🇦 Saudi Arabia — Land-Driven Economy")
-    st.write("""
-    For decades, Saudi Arabia's economy has been built overwhelmingly around its natural resource 
-    endowment — vast oil reserves (Land). This has funded national infrastructure and development, 
-    but has also created a economic vulnerability to oil price swings, prompting the country's 
-    "Vision 2030" plan to diversify into tourism, technology, and entrepreneurship-driven sectors.
-    """)
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("🇸🇦 Saudi Arabia — Land-Driven Economy")
+        st.write("""
+        For decades, Saudi Arabia's economy has been built overwhelmingly around its natural resource 
+        endowment — vast oil reserves (Land). This has funded national infrastructure and development, 
+        but has also created a economic vulnerability to oil price swings, prompting the country's 
+        "Vision 2030" plan to diversify into tourism, technology, and entrepreneurship-driven sectors.
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400", caption="Saudi Arabia — Oil & Land")
 
-    st.subheader("🇨🇳 China — Labour and Capital-Driven Growth")
-    st.write("""
-    China's rapid growth from the 1980s onward was driven substantially by a massive, low-cost labour 
-    force combined with enormous investment in capital (factories, infrastructure, ports). This combination 
-    made China the "world's factory." In recent years, China has been shifting toward higher-value 
-    manufacturing and technology, requiring more skilled labour and innovation (entrepreneurship).
-    """)
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1474181487882-a96a18d0771c?w=400", caption="China — Manufacturing")
+    with col_text:
+        st.subheader("🇨🇳 China — Labour and Capital-Driven Growth")
+        st.write("""
+        China's rapid growth from the 1980s onward was driven substantially by a massive, low-cost labour 
+        force combined with enormous investment in capital (factories, infrastructure, ports). This combination 
+        made China the "world's factory." In recent years, China has been shifting toward higher-value 
+        manufacturing and technology, requiring more skilled labour and innovation (entrepreneurship).
+        """)
 
-    st.subheader("🇮🇳 India — A Growing Services and Entrepreneurship Hub")
-    st.write("""
-    India has leveraged a large, increasingly skilled labour force (especially in IT and services) 
-    alongside a fast-growing entrepreneurial startup ecosystem — India has one of the largest numbers 
-    of unicorn startups (companies valued over $1 billion) globally. The country's challenge has been 
-    building enough capital (infrastructure) to fully support this labour and entrepreneurial potential.
-    """)
+    col_text, col_img = st.columns([2, 1])
+    with col_text:
+        st.subheader("🇮🇳 India — A Growing Services and Entrepreneurship Hub")
+        st.write("""
+        India has leveraged a large, increasingly skilled labour force (especially in IT and services) 
+        alongside a fast-growing entrepreneurial startup ecosystem — India has one of the largest numbers 
+        of unicorn startups (companies valued over $1 billion) globally. The country's challenge has been 
+        building enough capital (infrastructure) to fully support this labour and entrepreneurial potential.
+        """)
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1528747045269-390fe33c19f2?w=400", caption="India — Tech & Startups")
 
-    st.subheader("🇺🇸 United States — Capital and Entrepreneurship-Driven Economy")
-    st.write("""
-    The U.S. economy is often cited as a model of entrepreneurship-driven growth, home to major 
-    innovation hubs like Silicon Valley. Deep capital markets (access to venture capital, stock markets, 
-    and credit) allow entrepreneurs to raise funding relatively easily compared to many other countries, 
-    fueling continuous business creation and technological innovation.
-    """)
+    col_img, col_text = st.columns([1, 2])
+    with col_img:
+        st.image("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400", caption="USA — Innovation Hubs")
+    with col_text:
+        st.subheader("🇺🇸 United States — Capital and Entrepreneurship-Driven Economy")
+        st.write("""
+        The U.S. economy is often cited as a model of entrepreneurship-driven growth, home to major 
+        innovation hubs like Silicon Valley. Deep capital markets (access to venture capital, stock markets, 
+        and credit) allow entrepreneurs to raise funding relatively easily compared to many other countries, 
+        fueling continuous business creation and technological innovation.
+        """)
 
     st.subheader("🇸🇬 Singapore — Maximizing Limited Land")
     st.write("""

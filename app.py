@@ -75,8 +75,15 @@ foundation of economics, because it answers the most basic question any society 
 # ---------------------------------------------------------
 elif topic == "Land":
     st.header("🌍 Land")
-    st.image("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1000",
-              caption="Farmland — a classic example of Land as a factor of production")
+    img1, img2, img3, img4 = st.columns(4)
+    with img1:
+        st.image("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=400", caption="Farmland")
+    with img2:
+        st.image("https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400", caption="Forests")
+    with img3:
+        st.image("https://images.unsplash.com/photo-1518623489648-a173ef7824f3?w=400", caption="Minerals & Mining")
+    with img4:
+        st.image("https://images.unsplash.com/photo-1439405326854-014607f694d7?w=400", caption="Oceans & Water")
     st.subheader("Definition")
     st.write("""
     In economics, "Land" refers to **all natural resources** that are used to produce goods and services — 
@@ -155,8 +162,15 @@ elif topic == "Land":
 # ---------------------------------------------------------
 elif topic == "Labour":
     st.header("👷 Labour")
-    st.image("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1000",
-              caption="Workers on a factory floor — Labour is human effort, physical or mental")
+    img1, img2, img3, img4 = st.columns(4)
+    with img1:
+        st.image("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400", caption="Factory Workers")
+    with img2:
+        st.image("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400", caption="Surgeon (Skilled Labour)")
+    with img3:
+        st.image("https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400", caption="Software Engineer")
+    with img4:
+        st.image("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=400", caption="Farm Labour")
     st.subheader("Definition")
     st.write("""
     Labour refers to the **physical and mental human effort** used in the production of goods and services. 
@@ -237,8 +251,15 @@ elif topic == "Labour":
 # ---------------------------------------------------------
 elif topic == "Capital":
     st.header("🏗️ Capital")
-    st.image("https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1000",
-              caption="Machinery and tools — Capital is man-made resources used to produce other goods")
+    img1, img2, img3, img4 = st.columns(4)
+    with img1:
+        st.image("https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400", caption="Industrial Machinery")
+    with img2:
+        st.image("https://images.unsplash.com/photo-1595656180594-2fa9b3d0aa30?w=400", caption="Tractor (Fixed Capital)")
+    with img3:
+        st.image("https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?w=400", caption="Factory Assembly Line")
+    with img4:
+        st.image("https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400", caption="Laptop (Digital Capital)")
     st.subheader("Definition")
     st.write("""
     Capital refers to **man-made resources** used to produce other goods and services. 
@@ -322,8 +343,15 @@ elif topic == "Capital":
 # ---------------------------------------------------------
 elif topic == "Entrepreneurship":
     st.header("💡 Entrepreneurship")
-    st.image("https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000",
-              caption="A founder at work — Entrepreneurship organizes land, labour, and capital while bearing risk")
+    img1, img2, img3, img4 = st.columns(4)
+    with img1:
+        st.image("https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400", caption="Founder at Work")
+    with img2:
+        st.image("https://images.unsplash.com/photo-1552664730-d307ca884978?w=400", caption="Startup Team")
+    with img3:
+        st.image("https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400", caption="Pitching an Idea")
+    with img4:
+        st.image("https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400", caption="Small Business Owner")
     st.subheader("Definition")
     st.write("""
     Entrepreneurship is the **skill and initiative** of organizing the other three factors of production 
@@ -482,6 +510,15 @@ elif topic == "Entrepreneurship":
 # ---------------------------------------------------------
 elif topic == "Economic Theories & Thinkers":
     st.header("📚 Key Economic Theories & Thinkers")
+    img1, img2, img3, img4 = st.columns(4)
+    with img1:
+        st.image("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=400", caption="Classical Economics Era")
+    with img2:
+        st.image("https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400", caption="Economic Theory & Books")
+    with img3:
+        st.image("https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400", caption="Markets & Trade")
+    with img4:
+        st.image("https://images.unsplash.com/photo-1543286386-713bdd548da4?w=400", caption="Industrial Progress")
     st.write("""
     The four-factor model didn't appear overnight — it developed over roughly 250 years of economic thought. 
     Here are the major contributors and how their ideas connect to what you've learned.
@@ -607,6 +644,15 @@ elif topic == "How They Work Together":
 # ---------------------------------------------------------
 elif topic == "Country Case Studies":
     st.header("🌐 Country Case Studies")
+    img1, img2, img3, img4 = st.columns(4)
+    with img1:
+        st.image("https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400", caption="Saudi Arabia — Oil & Land")
+    with img2:
+        st.image("https://images.unsplash.com/photo-1474181487882-a96a18d0771c?w=400", caption="China — Manufacturing")
+    with img3:
+        st.image("https://images.unsplash.com/photo-1528747045269-390fe33c19f2?w=400", caption="India — Tech & Startups")
+    with img4:
+        st.image("https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400", caption="USA — Innovation Hubs")
     st.write("""
     Different countries have built their economies by emphasizing different factors of production. 
     These examples show how the four-factor framework plays out at a national scale.

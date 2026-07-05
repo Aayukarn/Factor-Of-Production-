@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(page_title="Factors of Production", page_icon="🏭", layout="wide")
 
 st.title("🏭 Factors of Production")
-st.write("**BY KAMAL MODEL SR SEC SCHOOL**")
+st.write("****BY KAMAL MODEL SR SEC SCHOOL****")
 st.write("**SPECIAL THANKS TO AAYU KARN AND KUNAL KUMAR MAHTO THE MAKER OF THIS WEBSITE**")
 
 st.divider()

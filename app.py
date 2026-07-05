@@ -3,6 +3,8 @@ import streamlit as st
 st.set_page_config(page_title="Factors of Production", page_icon="🏭", layout="wide")
 
 st.title("🏭 Factors of Production")
+st.write("BY KAMAL MODEL SR SEC SCHOOL")
+st.write("SPECIAL THANKS TO AAYU KARN AND KUNAL KUMAR MAHTO THE MAKER OF THIS APP")
 st.write("A comprehensive study of the four resources every economy needs to produce goods and services: **Land, Labour, Capital, and Entrepreneurship.**")
 
 st.divider()

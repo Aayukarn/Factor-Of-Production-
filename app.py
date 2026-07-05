@@ -75,6 +75,8 @@ foundation of economics, because it answers the most basic question any society 
 # ---------------------------------------------------------
 elif topic == "Land":
     st.header("🌍 Land")
+    st.image("https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1000",
+              caption="Farmland — a classic example of Land as a factor of production")
     st.subheader("Definition")
     st.write("""
     In economics, "Land" refers to **all natural resources** that are used to produce goods and services — 
@@ -153,6 +155,8 @@ elif topic == "Land":
 # ---------------------------------------------------------
 elif topic == "Labour":
     st.header("👷 Labour")
+    st.image("https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1000",
+              caption="Workers on a factory floor — Labour is human effort, physical or mental")
     st.subheader("Definition")
     st.write("""
     Labour refers to the **physical and mental human effort** used in the production of goods and services. 
@@ -233,6 +237,8 @@ elif topic == "Labour":
 # ---------------------------------------------------------
 elif topic == "Capital":
     st.header("🏗️ Capital")
+    st.image("https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1000",
+              caption="Machinery and tools — Capital is man-made resources used to produce other goods")
     st.subheader("Definition")
     st.write("""
     Capital refers to **man-made resources** used to produce other goods and services. 
@@ -316,6 +322,8 @@ elif topic == "Capital":
 # ---------------------------------------------------------
 elif topic == "Entrepreneurship":
     st.header("💡 Entrepreneurship")
+    st.image("https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1000",
+              caption="A founder at work — Entrepreneurship organizes land, labour, and capital while bearing risk")
     st.subheader("Definition")
     st.write("""
     Entrepreneurship is the **skill and initiative** of organizing the other three factors of production 
